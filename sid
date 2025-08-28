@@ -1,6 +1,6 @@
-sid
-git init --> initilize the given directory
-git status 
-git add
-red- file is not ready to execute
-green file is ready to executegit
+two types of file creation 
+home---web page is static created using html and css no functional base
+index---dynamic page created using functional base and data base created
+head in html ius only used for linking css and othr functions and for title
+title--- indication of webpage
+
