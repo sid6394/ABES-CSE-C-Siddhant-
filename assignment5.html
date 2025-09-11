@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Counter App</title>
+</head>
+<style>
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+#counter {
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.buttons button {
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#decrease {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+#reset {
+  background-color: #999;
+  color: white;
+}
+
+#increase {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+</style>
+<body>
+  <div class="container">
+    <img src="https://cdna.artstation.com/p/assets/images/images/001/815/492/large/steven-kuo-hi-res-tapcount-icon.jpg?1453184799" height="100" width="100" align="left">
+    <h1>Counter App</h1>
+    <div id="counter">0</div>
+    <div class="buttons">
+      <button id="decrease">-</button>
+      <button id="reset">Reset</button>
+      <button id="increase">+</button>
+    </div>
+  </div>
+
+  <script>
+    const counterDisplay = document.getElementById('counter');
+let count = 0;
+
+document.getElementById('increase').addEventListener('click', () => {
+  count++;
+  updateDisplay();
+});
+
+document.getElementById('decrease').addEventListener('click', () => {
+  count--;
+  updateDisplay();
+});
+
+document.getElementById('reset').addEventListener('click', () => {
+  count = 0;
+  updateDisplay();
+});
+
+function updateDisplay() {
+  counterDisplay.textContent = count;
+}
+
+  </script>
+</body>
+</html>
